@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92DE784A-21A3-4D22-9F50-A04AE9EA3CD6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>capui</RootNamespace>
+    <AssemblyName>capui</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>capui.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>capui.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=4.14.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.4.14.0\lib\netstandard2.0\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=4.14.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.4.14.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting, Version=4.14.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.Scripting.4.14.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Scripting, Version=4.14.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Scripting.Common.4.14.0\lib\netstandard2.0\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.9.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Odbc, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Odbc.9.0.6\lib\net462\System.Data.Odbc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.9.0.0\lib\net462\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.7.0.0\lib\net462\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BarDetailsForm.Designer.vb">
+      <DependentUpon>BarDetailsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BarDetailsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAPmain.vb" />
+    <Compile Include="clsChart.vb" />
+    <Compile Include="clsChartConfig.vb" />
+    <Compile Include="clsChartData.vb" />
+    <Compile Include="clsChartDefect.vb" />
+    <Compile Include="clsDefect.vb" />
+    <Compile Include="clsFeature.vb" />
+    <Compile Include="clsFeatureClass.vb" />
+    <Compile Include="clsHotFeature.vb" />
+    <Compile Include="clsLocalApp.vb" />
+    <Compile Include="clsLotCountToday.vb" />
+    <Compile Include="clsLotManagerQueue.vb" />
+    <Compile Include="clsLotQueueItem.vb" />
+    <Compile Include="clsLotSequence.vb" />
+    <Compile Include="clsParameter.vb" />
+    <Compile Include="clsPen.vb" />
+    <Compile Include="clsPenData.vb" />
+    <Compile Include="clsProtoType.vb" />
+    <Compile Include="clsProtoTypeParam.vb" />
+    <Compile Include="clsQualityStatus.vb" />
+    <Compile Include="clsReportData.vb" />
+    <Compile Include="clsSampleCount.vb" />
+    <Compile Include="clsSAXEngineHandler.vb" />
+    <Compile Include="clsSAXhandler.vb" />
+    <Compile Include="clsSAXTranslation.vb" />
+    <Compile Include="clsStationKey.vb" />
+    <Compile Include="clsSubFeature.vb" />
+    <Compile Include="clsSystemSettings.vb" />
+    <Compile Include="clsUnitId.vb" />
+    <Compile Include="clsWindow.vb" />
+    <Compile Include="clsWindowState.vb" />
+    <Compile Include="colChartData.vb" />
+    <Compile Include="colChartDefects.vb" />
+    <Compile Include="colCharts.vb" />
+    <Compile Include="colDefect.vb" />
+    <Compile Include="colFeatureClasses.vb" />
+    <Compile Include="colFeatures.vb" />
+    <Compile Include="colHotFeatures.vb" />
+    <Compile Include="colLocalApps.vb" />
+    <Compile Include="colLotMangerQueue.vb" />
+    <Compile Include="colLotSequences.vb" />
+    <Compile Include="colParameters.vb" />
+    <Compile Include="colProtoTypeParam.vb" />
+    <Compile Include="colProtoTypes.vb" />
+    <Compile Include="colQualityStatuses.vb" />
+    <Compile Include="colSAXhandlers.vb" />
+    <Compile Include="colSAXTranslations.vb" />
+    <Compile Include="colStationKeys.vb" />
+    <Compile Include="colSubFeatures.vb" />
+    <Compile Include="Context.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllContext.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDefectEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnterGoodPen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGoodPen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLotManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLotManagerSink.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLotSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewLot.Designer.vb">
+      <DependentUpon>frmNewLot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewLot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNextcap.Designer.vb">
+      <DependentUpon>frmNextcap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNextcap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPenDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemoteUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServerSink.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnitCapture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotQualityStatusEditorForm.Designer.vb">
+      <DependentUpon>LotQualityStatusEditorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LotQualityStatusEditorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdlChart.vb" />
+    <Compile Include="mdlcommon.vb" />
+    <Compile Include="mdlCreatePen.vb" />
+    <Compile Include="mdlDefectEditor.vb" />
+    <Compile Include="mdlGlobal.vb" />
+    <Compile Include="mdlLotManager.vb" />
+    <Compile Include="mdlMain.vb" />
+    <Compile Include="mdlNextcap.vb" />
+    <Compile Include="mdlReports.vb" />
+    <Compile Include="mdlSAX.vb" />
+    <Compile Include="mdlTestDebug.vb" />
+    <Compile Include="mdlTools.vb" />
+    <Compile Include="mdlUnitCapture.vb" />
+    <Compile Include="mdlWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ParamType.vb" />
+    <Compile Include="ParamTypes.vb" />
+    <Compile Include="prototype.vb" />
+    <Compile Include="Security.vb" />
+    <Compile Include="SiteAwareManager.vb" />
+    <Compile Include="ToolStripExtensions.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BarDetailsForm.resx">
+      <DependentUpon>BarDetailsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllContext.resx" />
+    <EmbeddedResource Include="frmDefectEditor.resx">
+      <DependentUpon>frmDefectEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLotManager.resx">
+      <DependentUpon>frmLotManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLotManagerSink.resx">
+      <DependentUpon>frmLotManagerSink.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLotSummary.resx">
+      <DependentUpon>frmLotSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewLot.resx">
+      <DependentUpon>frmNewLot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotQualityStatusEditorForm.resx">
+      <DependentUpon>LotQualityStatusEditorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdlWindow.resx">
+      <DependentUpon>mdlWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ncapsrv\ncapsrv.vbproj">
+      <Project>{2ccedf0d-8840-4d25-8528-f413d78f8c25}</Project>
+      <Name>ncapsrv</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.11.0\analyzers\dotnet\vb\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.11.0\analyzers\dotnet\vb\Microsoft.CodeAnalysis.VisualBasic.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\AppLogo.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
